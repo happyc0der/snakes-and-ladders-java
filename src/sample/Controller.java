@@ -12,7 +12,6 @@ import javafx.scene.*;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.stage.Stage;
@@ -156,10 +155,16 @@ public class Controller
     }
 
     @FXML
-    void getCoordinates(MouseEvent event)
+    void initialize()
     {
-        label_1.setText(Main.p1.getName());
-        label_2.setText(Main.p2.getName());
+        // Runs once the FXML fields are injected. Only Board.fxml has the name labels,
+        // so show the player names as soon as the board appears instead of waiting
+        // for the first mouse move.
+        if (label_1 != null && label_2 != null)
+        {
+            label_1.setText(Main.p1.getName());
+            label_2.setText(Main.p2.getName());
+        }
     }
 
     @FXML
