@@ -49,7 +49,7 @@ A two-player Snakes and Ladders desktop game written in Java with JavaFX and FXM
 If you use [mise](https://mise.jdx.dev/), it can provide both tools without a global install:
 
 ```sh
-mise exec java@21 maven@3 -- mvn javafx:run
+mise exec java@temurin-21 maven@3 -- mvn javafx:run
 ```
 
 ## Build and run
