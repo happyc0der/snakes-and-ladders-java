@@ -34,14 +34,14 @@
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <TextField fx:id="Player_2_text_field" layoutX="235.0" layoutY="871.0" prefHeight="34.0" prefWidth="167.0" promptText="Player 2" style="-fx-background-image: url('/Text_Field.png');">
+      <TextField fx:id="Player_2_text_field" layoutX="235.0" layoutY="871.0" prefHeight="34.0" prefWidth="167.0" promptText="Player 2" style="-fx-background-image: url('/Text_Field.png'); -fx-background-size: 100% 100%; -fx-background-color: transparent; -fx-background-insets: 0; -fx-padding: 0 10 0 10; -fx-text-inner-color: white; -fx-text-fill: white; -fx-prompt-text-fill: rgba(255,255,255,0.55); -fx-highlight-fill: #9b6bd9; -fx-highlight-text-fill: white;">
          <font>
-            <Font name="Arial" size="14.0" />
+            <Font name="Arial Black" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="Player_1_text_field" layoutX="235.0" layoutY="830.0" prefHeight="34.0" prefWidth="167.0" promptText="Player 1" style="-fx-background-image: url('/Text_Field.png');">
+      <TextField fx:id="Player_1_text_field" layoutX="235.0" layoutY="830.0" prefHeight="34.0" prefWidth="167.0" promptText="Player 1" style="-fx-background-image: url('/Text_Field.png'); -fx-background-size: 100% 100%; -fx-background-color: transparent; -fx-background-insets: 0; -fx-padding: 0 10 0 10; -fx-text-inner-color: white; -fx-text-fill: white; -fx-prompt-text-fill: rgba(255,255,255,0.55); -fx-highlight-fill: #9b6bd9; -fx-highlight-text-fill: white;">
          <font>
-            <Font name="Arial" size="14.0" />
+            <Font name="Arial Black" size="14.0" />
          </font>
       </TextField>
       <Button fx:id="Play2" layoutX="310.0" layoutY="949.0" mnemonicParsing="false" onAction="#show_Board" opacity="0.0" prefHeight="42.0" prefWidth="125.0" />
