@@ -24,7 +24,6 @@ public class Controller
 {
     static int roll;
     private Stage stage;
-    private boolean flag = false;
     boolean player1_move = false;
     boolean player2_move = true;
 
@@ -157,34 +156,30 @@ public class Controller
     @FXML
     void initialize()
     {
-        // Runs once the FXML fields are injected. Only Board.fxml has the name labels,
-        // so show the player names as soon as the board appears instead of waiting
-        // for the first mouse move.
+        // Runs once the FXML fields are injected. The same controller class backs
+        // sample.fxml, menu.fxml and Board.fxml, but only Board.fxml has these nodes,
+        // so the game screen is set up here as soon as the board appears.
         if (label_1 != null && label_2 != null)
         {
             label_1.setText(Main.p1.getName());
             label_2.setText(Main.p2.getName());
+        }
+        if (Dice_arrow != null)
+        {
+            //bounce the arrow above the dice
+            TranslateTransition transition = new TranslateTransition();
+            transition.setDuration(Duration.millis(500));
+            transition.setNode(Dice_arrow);
+            transition.setByY(14);
+            transition.setAutoReverse(true);
+            transition.setCycleCount(Timeline.INDEFINITE);
+            transition.play();
         }
     }
 
     @FXML
     void Dice_roll(ActionEvent event)
     {
-        if (!flag)
-        {
-            flag = true;
-            new Thread(() ->
-            {
-                TranslateTransition transition = new TranslateTransition();
-                transition.setDuration(Duration.millis(500));
-                transition.setNode(Dice_arrow);
-                transition.setByY(14);
-                transition.setAutoReverse(true);
-                transition.setCycleCount(Timeline.INDEFINITE);
-                transition.play();
-            }).start();
-        }
-
         Dice dice = new Dice();
         roll = dice.getVal();
         Image img = new Image("Dice_face_"+roll+".png");
@@ -545,7 +540,6 @@ public class Controller
         Main.p2.setWinner(false);
         player1_move=false;
         player2_move=true;
-        flag=false;
     }
 
     public void call_transition(FadeTransition transition, Node id, double value,double duration)
@@ -606,16 +600,10 @@ public class Controller
 
         try
         {
+            // reset the shared players before the board (and its own controller) is created
+            resetGame();
             stage = Main.Stage;
             switchScene(stage,"Board.fxml");
-            resetGame();
-            TranslateTransition transition = new TranslateTransition();
-            transition.setDuration(Duration.millis(500));
-            transition.setNode(Dice_arrow);
-            transition.setByY(14);
-            transition.setAutoReverse(true);
-            transition.setCycleCount(Timeline.INDEFINITE);
-            transition.play();
         }
         catch (Exception e)
         {
