@@ -9,19 +9,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="600.0" style="-fx-background-image: url('file:/D:/Coding/Java_Programs/Snake_and_Ladders/src/BG.png'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="600.0" style="-fx-background-image: url('/BG.png'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <ImageView fitHeight="210.0" fitWidth="371.0" layoutX="116.0" layoutY="60.0" pickOnBounds="true">
          <image>
             <Image url="@../Snake_and_ladder_logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="Play" alignment="BASELINE_CENTER" contentDisplay="TEXT_ONLY" layoutX="166.0" layoutY="346.0" mnemonicParsing="false" onAction="#New_Game" prefHeight="73.0" prefWidth="270.0" style="-fx-background-image: url('file:/D:/Coding/Java_Programs/Snake_and_Ladders/src/Play_button3.png'); -fx-background-size: contain;" text="Play" textFill="WHITE">
+      <Button fx:id="Play" alignment="BASELINE_CENTER" contentDisplay="TEXT_ONLY" layoutX="166.0" layoutY="346.0" mnemonicParsing="false" onAction="#New_Game" prefHeight="73.0" prefWidth="270.0" style="-fx-background-image: url('/Play_button3.png'); -fx-background-size: contain;" text="Play" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="21.0" />
          </font>
       </Button>
-      <Button fx:id="Exit" layoutX="166.0" layoutY="483.0" mnemonicParsing="false" onAction="#Quit" prefHeight="74.0" prefWidth="270.0" style="-fx-background-image: url('file:/D:/Coding/Java_Programs/Snake_and_Ladders/src/Exit_button1.png'); -fx-background-size: contain;" text="Exit" textFill="WHITE">
+      <Button fx:id="Exit" layoutX="166.0" layoutY="483.0" mnemonicParsing="false" onAction="#Quit" prefHeight="74.0" prefWidth="270.0" style="-fx-background-image: url('/Exit_button1.png'); -fx-background-size: contain;" text="Exit" textFill="WHITE">
          <font>
             <Font name="Arial Black" size="21.0" />
          </font>
@@ -34,12 +34,12 @@
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <TextField fx:id="Player_2_text_field" layoutX="235.0" layoutY="871.0" prefHeight="34.0" prefWidth="167.0" promptText="Player 2" style="-fx-background-image: url('file:/D:/Coding/Java_Programs/Snake_and_Ladders/src/Text_field.png');">
+      <TextField fx:id="Player_2_text_field" layoutX="235.0" layoutY="871.0" prefHeight="34.0" prefWidth="167.0" promptText="Player 2" style="-fx-background-image: url('/Text_Field.png');">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="Player_1_text_field" layoutX="235.0" layoutY="830.0" prefHeight="34.0" prefWidth="167.0" promptText="Player 1" style="-fx-background-image: url('file:/D:/Coding/Java_Programs/Snake_and_Ladders/src/Text_field.png');">
+      <TextField fx:id="Player_1_text_field" layoutX="235.0" layoutY="830.0" prefHeight="34.0" prefWidth="167.0" promptText="Player 1" style="-fx-background-image: url('/Text_Field.png');">
          <font>
             <Font name="Arial" size="14.0" />
          </font>

@@ -182,7 +182,7 @@ public class Controller
 
         Dice dice = new Dice();
         roll = dice.getVal();
-        Image img = new Image("file:/D:/Coding/Java_Programs/Snake_and_Ladders/src/Dice_face_"+roll+".png");
+        Image img = new Image("Dice_face_"+roll+".png");
         Dice_view_changer.setImage(img);
         //disable the image next to the dice for player
         if (!player1_move)
@@ -258,7 +258,7 @@ public class Controller
         try
         {
             stage = Main.Stage;
-            switchScene(stage,"board.fxml");
+            switchScene(stage,"Board.fxml");
         } catch (Exception e) {}
     }
 
@@ -602,7 +602,7 @@ public class Controller
         try
         {
             stage = Main.Stage;
-            switchScene(stage,"board.fxml");
+            switchScene(stage,"Board.fxml");
             resetGame();
             TranslateTransition transition = new TranslateTransition();
             transition.setDuration(Duration.millis(500));
